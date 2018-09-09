@@ -1,3 +1,3 @@
-# K_codes
+# Four_codes
 
-Trying to automate stuffs while at K
+Automating stuffs to make work easier while at a Big4 firm
