@@ -1,0 +1,6 @@
+--To link incidents to Test case on SpiraTest
+
+select INC.INCIDENT_ID, INC.NAME, INC.INCIDENT_STATUS_NAME, TC.TEST_CASE_ID, INC.SEVERITY_NAME, INC.OPENER_NAME,INC.OWNER_NAME, TC.NAME as TEST_CASE_NAME
+ from SpiraTestEntities.R_Incidents as INC 
+join SpiraTestEntities.R_TestCaseIncidents as TCI on INC.INCIDENT_ID = TCI.INCIDENT_ID
+join SpiraTestEntities.R_TestCases as TC on TC.TEST_CASE_ID = TCI.TEST_CASE_ID where INC.PROJECT_ID = ${ProjectId} AND INC.IS_DELETED = FALSE
