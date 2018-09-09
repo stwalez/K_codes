@@ -1,0 +1,12 @@
+function OpenInNewTabWinBrowser(tcn_no) {
+  //give a random site address
+  var url = 'https://xyz.example.net/5/zzz/' +tcn_no+ '.aspx'
+  var win = window.open(url, '_blank');
+  win.focus(); //not needed in this case
+}
+
+//create an array to loop from
+var arr = [46,98,34,21]
+for (var i =0;i<arr.length;i++){
+	OpenInNewTabWinBrowser(arr[i]);
+}
